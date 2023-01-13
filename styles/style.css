@@ -8,12 +8,16 @@
   --light-color: #f4f4fd;
   --active-color: #ffffff;
   --button-focus: #404bbf;
+  --costicon-color: #8e8f99;
 }
 h1,
 h2,
 h3,
-h4, h5, h6,
-p, ul {
+h4,
+h5,
+h6,
+p,
+ul {
   margin: 0;
   padding: 0;
 }
@@ -80,8 +84,6 @@ p, ul {
 .kontakt .kontakt-list:not(:last-child) {
   margin-right: 40px;
 }
-.kontakt-list {
-}
 .link-mail {
   /* Body */
   font-weight: 400;
@@ -108,21 +110,23 @@ p, ul {
 .link-tel:hover {
   color: var(--primary-brand-color);
 }
-.main-section {
-}
+
+/*HERO*/
+
 .hero {
   background: var(--dark-color);
   text-align: center;
   padding-bottom: 190px;
   padding-top: 190px;
   background-image: linear-gradient(
-  to right,
-  rgba(46, 47, 66, 0.7),
-  rgba(46, 47, 66, 0.7) ),
-url("../images/image_hero/people-office.jpg");
-  background-repeat:no-repeat;
+      to right,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url("../images/image_hero/people-office.jpg");
+  background-repeat: no-repeat;
   background-position: center;
-  background-size: cover; 
+  background-size: cover;
 }
 .hero-text {
   font-weight: 600;
@@ -158,8 +162,10 @@ url("../images/image_hero/people-office.jpg");
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
-  
 }
+
+/*SECTION INFORMATION*/
+
 .flexx {
   display: flex;
   align-items: center;
@@ -176,12 +182,15 @@ url("../images/image_hero/people-office.jpg");
 .forinfoblok {
   width: 264px;
 }
-.galery:not(:last-child) {
-  margin-right: 24px;
-}
 
-.galery {
-  border: 1px solid var(--accent-color);
+.infoicon-item {
+  display: flex;
+}
+.info-icon {
+  padding: 24px 100px;
+  width: 264px;
+  max-height: 112px;
+  background-color: var(--light-color);
 }
 .info-item {
   font-weight: 600;
@@ -189,6 +198,7 @@ url("../images/image_hero/people-office.jpg");
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--dark-color);
+  margin-top: 8px;
   margin-bottom: 8px;
 }
 .info-text {
@@ -200,6 +210,14 @@ url("../images/image_hero/people-office.jpg");
   width: 264px;
 }
 
+/*GALERI SECTION*/
+
+.galery:not(:last-child) {
+  margin-right: 24px;
+}
+.galery {
+  border: 1px solid var(--accent-color);
+}
 .galery-section {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -222,6 +240,9 @@ url("../images/image_hero/people-office.jpg");
   display: flex;
   justify-content: center;
 }
+
+/*TEAM LEED SECTION*/
+
 .teamleed-galery {
   background-color: var(--light-color);
   padding-top: 120px;
@@ -236,7 +257,6 @@ url("../images/image_hero/people-office.jpg");
   text-transform: capitalize;
   color: var(--dark-color);
   text-align: center;
-
   margin-bottom: 70px;
 }
 
@@ -275,32 +295,85 @@ url("../images/image_hero/people-office.jpg");
 .img {
   font-size: 0;
 }
+
+.leedsoc-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.leed-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--primary-brand-color);
+  margin-top: 12px;
+}
+.leed-link:not(:last-child) {
+  margin-right: 24px;
+}
+.leed-link:hover,
+.leed-link:focus {
+  background-color: var(--button-focus);
+}
+.leed-icon {
+  width: 16px;
+  height: 16px;
+  margin-top: 12px;
+}
+
+/*costumers section*/
+
+.costumers {
+  text-align: center;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.costumers-list {
+  display: flex;
+}
+.costumers-item {
+  width: 168px;
+  height: 88px;
+  padding-top: 16px;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+}
+.costumers-item:not(:last-child) {
+  margin-right: 24px;
+}
+.costumers-item:hover,
+.costumers-item:focus {
+  border: 1px solid var(--button-focus);
+  border-radius: 4px;
+}
+
+.costumers-icon {
+  width: 105px;
+  height: 55px;
+  fill: var(--costicon-color);
+}
+.costumers-icon:hover,
+.costumers-icon:focus {
+  fill: var(--button-focus);
+}
+
+/*FOOTER*/
+
 .footer {
   background: var(--dark-color);
   padding-top: 100px;
   padding-bottom: 100px;
-  
-
-  border:solid 1px red;
 }
 
-.footer>.container{
+.footer > .container {
   display: flex;
 }
 
-.footer-text {
-
-  border:solid 1px red;
-  
-  
-}
-
-.logo-webstudio{
+.logo-webstudio {
   margin-right: 120px;
 }
 .studio-foter {
   color: var(--light-color);
-  
 }
 .ftext {
   font-family: inherit;
@@ -311,57 +384,37 @@ url("../images/image_hero/people-office.jpg");
   max-width: 264px;
   margin-top: 16px;
   margin-bottom: 0;
-
-
-  border:solid 1px rgb(0, 255, 221);
-}
-.social-footer {
-  margin: 0;
-  padding: 0;
-
-  border:solid 1px rgb(211, 231, 31);
 }
 .soc-p {
   font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    color: var(--active-color);
-    margin-bottom: 16px;
-    border:solid 1px rgb(0, 217, 255);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--active-color);
+  margin-bottom: 16px;
 }
 .foot-list {
-  border:solid 1px rgb(136, 245, 11);
   display: flex;
 }
-.footitem{
-border:solid 1px rgb(233, 14, 204);
-width: 40px;
-height: 40px;
-text-align: center;
-background-color: rgba(255, 255, 255, 0.1);
-border-radius: 50%;
-
+.footitem {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
 }
-
-.footitem:not(:last-child){
-margin-right: 16px;
-
-
-
+.footitem:hover {
+  background-color: #31d0aa;
 }
-.footlink {
-  border:solid 1px rgb(139, 48, 48);
-  
-  
+.footitem:not(:last-child) {
+  margin-right: 16px;
 }
-.soc-icon{
+.soc-icon {
   width: 24px;
   height: 24px;
   margin: 0 auto;
-  margin: 8px;
-
-  border:solid 1px rgb(253, 229, 249);
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 /* ------------------------portfolio css */
 
@@ -385,7 +438,6 @@ margin-right: 16px;
 .filtres-list {
   display: flex;
   justify-content: center;
-
   margin-bottom: 70px;
 }
 .filtres-link:not(:last-child) {
@@ -566,15 +618,12 @@ margin-right: 16px;
   column-gap: 24px;
   justify-content: center;
 }
-.list-link{
-
-}
 .list-link:hover,
-:focus{
-box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+.list-link:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
-.link {
-}
+
 .card-paragraf {
   padding-top: 32px;
   padding-bottom: 32px;
