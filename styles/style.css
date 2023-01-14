@@ -113,7 +113,7 @@ ul {
 
 /*HERO*/
 
-.hero {
+.hero .container {
   background: var(--dark-color);
   text-align: center;
   padding-bottom: 190px;
@@ -127,6 +127,7 @@ ul {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  width: 1440px;
 }
 .hero-text {
   font-weight: 600;
@@ -296,24 +297,23 @@ ul {
   font-size: 0;
 }
 
-.leedsoc-item {
+.leedsoc-list {
   display: flex;
-  align-items: center;
   justify-content: center;
+  margin-top: 12px;
 }
-.leed-link {
+.leedsoc-item {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   background-color: var(--primary-brand-color);
-  margin-top: 12px;
 }
-.leed-link:not(:last-child) {
-  margin-right: 24px;
-}
-.leed-link:hover,
-.leed-link:focus {
+.leedsoc-item:hover,
+.leedsoc-item:focus {
   background-color: var(--button-focus);
+}
+.leedsoc-item:not(:last-child) {
+  margin-right: 24px;
 }
 .leed-icon {
   width: 16px;
@@ -324,36 +324,40 @@ ul {
 /*costumers section*/
 
 .costumers {
-  text-align: center;
   padding-top: 120px;
   padding-bottom: 120px;
 }
 .costumers-list {
   display: flex;
+  align-content: center;
+  justify-content: center;
+  gap: 24px;
 }
+
 .costumers-item {
   width: 168px;
   height: 88px;
-  padding-top: 16px;
-  border: 1px solid #8e8f99;
-  border-radius: 4px;
 }
-.costumers-item:not(:last-child) {
-  margin-right: 24px;
-}
-.costumers-item:hover,
-.costumers-item:focus {
-  border: 1px solid var(--button-focus);
+
+.costumers-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--costicon-color);
   border-radius: 4px;
+  fill: var(--costicon-color);
 }
 
 .costumers-icon {
   width: 105px;
   height: 55px;
-  fill: var(--costicon-color);
 }
-.costumers-icon:hover,
-.costumers-icon:focus {
+
+.costumers-link:hover,
+.costumers-link:focus {
+  border-color: var(--button-focus);
   fill: var(--button-focus);
 }
 
@@ -395,19 +399,18 @@ ul {
 }
 .foot-list {
   display: flex;
+  gap: 16px;
 }
-.footitem {
+.footlink {
+  display: flex;
   width: 40px;
   height: 40px;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
 }
-.footitem:hover {
+.footlink:hover {
   background-color: #31d0aa;
-}
-.footitem:not(:last-child) {
-  margin-right: 16px;
 }
 .soc-icon {
   width: 24px;
