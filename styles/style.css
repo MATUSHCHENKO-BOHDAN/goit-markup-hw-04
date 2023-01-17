@@ -302,19 +302,24 @@ ul {
   justify-content: center;
   margin-top: 12px;
 }
-.leedsoc-item {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: var(--primary-brand-color);
-}
-.leedsoc-item:hover,
-.leedsoc-item:focus {
-  background-color: var(--button-focus);
-}
 .leedsoc-item:not(:last-child) {
   margin-right: 24px;
 }
+
+.leed-link{
+  display: flex;
+  justify-content: center;
+   width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--primary-brand-color);
+
+}
+.leed-link:hover,
+.leed-link:focus{
+background-color: var(--button-focus);
+}
+
 .leed-icon {
   width: 16px;
   height: 16px;
@@ -409,7 +414,8 @@ ul {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
 }
-.footlink:hover {
+.footlink:hover,
+.footlink:focus {
   background-color: #31d0aa;
 }
 .soc-icon {
